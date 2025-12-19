@@ -1,26 +1,3 @@
-// export default function AboutPage() {
-//   return (
-//     <main className="py-16 px-6 max-w-4xl mx-auto min-h-screen">
-//       <h1 className="text-4xl font-bold mb-6">
-//         About Jay Hanuman Aagao Traders
-//       </h1>
-//       <p className="mb-4 text-gray-700">
-//         Jay Hanuman Aagao Traders is a trusted onion trading firm based in
-//         Patna, Bihar. We are engaged in wholesale trading and export of
-//         premium-quality red onions.
-//       </p>
-//       <p className="mb-4 text-gray-700">
-//         Our onions are sourced directly from experienced farmers and processed
-//         with proper grading and packing methods suitable for long-distance
-//         transport.
-//       </p>
-//       <p className="text-gray-700">
-//         We believe in transparent business practices and long-term
-//         relationships with our buyers.
-//       </p>
-//     </main>
-//   );
-// }
 
 export default function AboutPage() {
   return (

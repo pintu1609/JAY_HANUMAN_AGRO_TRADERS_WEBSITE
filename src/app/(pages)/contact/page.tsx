@@ -3,7 +3,6 @@ import { contactValidationSchema, initialContact } from '@/validation/Index';
 import { useFormik } from 'formik';
 import React, { useMemo, useState } from 'react';
 import toast from 'react-hot-toast';
-import Select from 'react-select';
 import countryList from 'react-select-country-list'
 import { BeatLoader } from 'react-spinners';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
