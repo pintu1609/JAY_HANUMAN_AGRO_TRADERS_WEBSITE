@@ -1,3 +1,4 @@
+import FAQ from "@/components/faq/FAQ";
 
 export default function AboutPage() {
   return (
@@ -76,6 +77,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+            <FAQ />
       {/* LOCATION */}
       <section className="py-16 px-6 text-center">
         <h2 className="text-2xl font-bold mb-3">📍 Based in Patna, Bihar</h2>
