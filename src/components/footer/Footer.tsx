@@ -15,15 +15,14 @@ const Footer = () => {
             <div className='bg-gray-900  py-2 mx-auto w-full bottom-0'>
                 <p className='text-[#5e5e5e] text-lg text-center'>© 2024 Jay Hanuman Aagao Traders. All Rights Reserved.</p>
             </div>
-            <button
+            {/* <button
                 onClick={scrollToTop}
                 className="absolute top-[-30px] right-4 bg-blue-500 p-2 rounded-full text-white shadow-lg hover:bg-blue-600 transition-colors z-50"
                 aria-label="Scroll to top"
             >
-                {/* <FaArrowUp size={20} /> */}
                 <MdKeyboardArrowUp className="text-white " size={40} />
 
-            </button>
+            </button> */}
 
         </footer>
     );

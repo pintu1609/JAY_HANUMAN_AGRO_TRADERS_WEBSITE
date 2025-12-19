@@ -1,55 +1,5 @@
-// "use client";
-// import React, { useEffect, useState } from 'react';
-// import About from './components/about/page';
-// import Product from './components/product/page';
 
 import Image from "next/image";
-
-// interface HomeProps {
-// }
-// const Home: React.FC<HomeProps> = () => {
-//   const images = [
-//     '/img/onion4.webp',
-//     '/img/onion2.jpg',
-//     '/img/onion3.jpg',
-    
-//   ];
-
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   useEffect(() => {
-//     // Set an interval to change the image every 2 seconds (2000 ms)
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-//     }, 5000);
-
-//     // Clean up interval on component unmount
-//     return () => clearInterval(interval);
-//   }, [images.length]);
- 
-
-// return(
-//     <div className="flex flex-col gap-6">
-//        <div className="relative w-full mb-5 mt-[-80px]"> {/* Adjust height/width as needed */}
-//         <img
-//           src={images[currentIndex]}
-//           alt={`Slide ${currentIndex + 1}`}
-//           className="w-full h-[90vh] object-cover transition-opacity duration-1000 "
-//         />
-//       </div>
-//       <div className='flex justify-center'>
-//       <About/>
-
-//       </div>
-//       <div className='flex justify-center bg-[#3c3f48]'>
-//         <Product/>
-//       </div>
-//   </div>
-   
-// )
-// }
-
-// export default Home
 
 export default function HomePage() {
   return (
@@ -168,12 +118,12 @@ export default function HomePage() {
 
       {/* FOOTER CTA */}
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">
+        <h2 className="text-3xl font-bold mb-8">
           Looking for a reliable onion supplier?
         </h2>
         <a
           href="/contact"
-          className="bg-green-600 px-8 py-4 rounded font-semibold"
+          className="bg-green-600 px-4 py-4 md:px-8 rounded font-semibold"
         >
           Contact Jay Hanuman Aagao Traders
         </a>

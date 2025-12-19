@@ -1,20 +1,3 @@
-// export default function ProductsPage() {
-//   return (
-//     <main className="py-16 px-6 max-w-5xl mx-auto min-h-screen">
-//       <h1 className="text-4xl font-bold mb-6">
-//         Red Onion – Wholesale & Export Supply
-//       </h1>
-
-//       <ul className="space-y-3 text-gray-700">
-//         <li>• Available sizes: Small, Medium, Large</li>
-//         <li>• Proper drying & grading</li>
-//         <li>• Packaging: 5kg, 10kg, 25kg mesh & jute bags</li>
-//         <li>• Suitable for domestic & export markets</li>
-//         <li>• Bulk order support available</li>
-//       </ul>
-//     </main>
-//   );
-// }
 
 export default function ProductsPage() {
   return (

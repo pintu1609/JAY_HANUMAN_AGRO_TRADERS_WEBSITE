@@ -1,53 +1,84 @@
 "use client";
-import { usePathname } from 'next/navigation';
-import { links } from '@/dumby';
-import Link from 'next/link';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { links } from "@/dumby";
+import { MdMenu, MdClose, MdKeyboardArrowRight } from "react-icons/md";
 
-interface NavbarProps {
-}
+const Navbar = () => {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
-const Navbar: React.FC<NavbarProps> = () => {
-  const pathname = usePathname()
-
-
-  
-
-  const navbarBgColor = ['/home', '/contact'].includes(pathname) ? 'bg-gray-900 ' : 'bg-gray-900';
-  console.log("🚀 ~ navbarBgColor:", navbarBgColor)
-
+  const navbarBgColor = "bg-gray-900";
 
   return (
-    <nav className={`navbar flex items-center h-20 ${navbarBgColor} sticky z-50`}>
-  <div className="navbar-container flex justify-between items-center w-4/5 mx-auto px-4">
-    <div className="navbar-left flex items-center gap-10">
-      <Link href="/home" className="flex items-center gap-3 text-2xl font-extrabold tracking-tight text-slate-900">
-        {/* <img className="w-8" src="https://i.postimg.cc/K8QFJGFw/1705389198122.jpg" alt="Logo" /> */}
-        <span className="text-white">Jay Hanuman Aagao Traders</span>
-      </Link>
-   
+    <nav className={`sticky top-0 z-50 ${navbarBgColor}`}>
+      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 
-    <div className="navbar-right flex gap-10 ml-10">
-      {links[0].links.map((link) => (
-        <Link key={link.url} href={`/${link.url}`} className="text-xl text-white hover:underline hover:underline-offset-[28px] decoration-[4px] decoration-blue-700">
-          {link.name}
+        {/* LOGO */}
+        <Link
+          href="/home"
+          className="text-xl md:text-2xl font-extrabold text-white"
+          onClick={() => setOpen(false)}
+        >
+          Jay Hanuman Aagao Traders
         </Link>
-      ))}
-    </div>
-    </div>
 
-    <div>
-    <Link href="/contact" passHref>
-      <button className="flex items-center gap-2 px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:none">
-        Contact Us
-        <MdKeyboardArrowRight className="text-white " size={30}/>
-      </button>
-    </Link>
-    </div>
-  </div>
-</nav>
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex items-center gap-10">
+          {links[0].links.map((link) => (
+            <Link
+              key={link.url}
+              href={`/${link.url}`}
+              className={`text-white hover:underline hover:underline-offset-[28px] decoration-[4px] decoration-blue-600 ${
+                pathname === `/${link.url}` ? "underline underline-offset-[28px]" : ""
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
 
+          <Link href="/contact">
+            <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+              Contact Us
+              <MdKeyboardArrowRight size={22} />
+            </button>
+          </Link>
+        </div>
+
+        {/* MOBILE MENU BUTTON */}
+        <button
+          className="md:hidden text-white text-3xl"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <MdClose /> : <MdMenu />}
+        </button>
+      </div>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="md:hidden bg-gray-900 border-t border-gray-700">
+          <div className="flex flex-col px-6 py-6 space-y-5">
+
+            {links[0].links.map((link) => (
+              <Link
+                key={link.url}
+                href={`/${link.url}`}
+                onClick={() => setOpen(false)}
+                className="text-white text-lg pb-2"
+              >
+                {link.name}
+              </Link>
+            ))}
+
+            <Link href="/contact" onClick={() => setOpen(false)} className="text-white text-lg pb-2">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 
