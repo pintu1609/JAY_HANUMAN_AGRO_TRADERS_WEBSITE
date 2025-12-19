@@ -1,3 +1,4 @@
+import OnionGallery from "@/components/gallery/OnionGallery";
 
 export default function ProductsPage() {
   return (
@@ -49,6 +50,8 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+            <OnionGallery />
+
 
       {/* PACKAGING */}
       <section className="bg-gray-50 py-20 px-6">

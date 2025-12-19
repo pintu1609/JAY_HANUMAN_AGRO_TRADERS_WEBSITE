@@ -80,6 +80,26 @@ export default function ContactPage() {
               <li>📧 Email: jugalsingh808284.com</li>
               <li>🕒 Business Hours: 9:00 AM – 7:00 PM</li>
             </ul>
+
+            <div className="mt-8">
+  <h3 className="text-lg font-semibold mb-3">Our Location</h3>
+
+  <div className="rounded-xl overflow-hidden border shadow-sm">
+    <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1491.3982807508492!2d85.20720937431769!3d25.551953625871967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2a19596bc373b%3A0xa503c725842fb076!2sJay%20Hanuman%20Agro%20Traders!5e0!3m2!1sen!2sin!4v1766157516757!5m2!1sen!2sin"
+
+      width="100%"
+      height="280"
+      loading="lazy"
+      className="border-0"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <p className="text-sm text-gray-600 mt-2">
+    Visit or contact us for bulk onion trading and export inquiries.
+  </p>
+</div>
           </div>
 
           {/* FORM */}
