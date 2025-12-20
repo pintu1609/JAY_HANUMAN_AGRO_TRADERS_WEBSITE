@@ -9,7 +9,7 @@ export default function HomePage() {
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Jay Hanuman Aagao Traders
+            Jay Hanuman Agro Traders
           </h1>
           <p className="text-xl mb-4">
             Trusted Onion Traders & Exporters from Patna, Bihar
@@ -117,7 +117,7 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER CTA */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-6 text-center">
+      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-2 md:px-6 text-center">
         <h2 className="text-3xl font-bold mb-8">
           Looking for a reliable onion supplier?
         </h2>
